@@ -15,8 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".OverDrawViewActivity">
         </activity>
+
         <activity android:name=".BusyOnDrawViewActivity">
         </activity>
     </application>

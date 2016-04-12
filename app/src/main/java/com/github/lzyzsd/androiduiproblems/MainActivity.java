@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setBackgroundDrawable(null);//取消window默认绘画
 
         Button showOverDraw = (Button) findViewById(R.id.btn_show_overdraw);
         showOverDraw.setOnClickListener(this);
