@@ -13,21 +13,26 @@ import android.view.View;
  * Created by bruce on 2/27/16.
  */
 public class BusyOnDrawView extends View {
+
+    private Paint mPaint;
+
     public BusyOnDrawView(Context context) {
-        super(context);
+        this(context,null);
     }
 
     public BusyOnDrawView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs,0);
     }
 
     public BusyOnDrawView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mPaint = new Paint();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public BusyOnDrawView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        mPaint = new Paint();
     }
 
     @Override
@@ -38,11 +43,10 @@ public class BusyOnDrawView extends View {
             System.out.println("canvas = [" + canvas + "]" + i);
         }
 
-        Paint paint = new Paint();
-        paint.setColor(Color.RED);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(4);
+        mPaint.setColor(Color.RED);
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStrokeWidth(4);
         int radius = Math.min(getWidth(), getHeight()) / 2;
-        canvas.drawCircle(getWidth()/2, getHeight()/2, radius, paint);
+        canvas.drawCircle(getWidth()/2, getHeight()/2, radius, mPaint);
     }
 }
