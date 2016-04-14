@@ -44,15 +44,15 @@ public class OverDrawView extends View {
         int height = getHeight();
 
         mPaint.setColor(Color.GRAY);
-        canvas.drawRect(0, 0, width, height, mPaint);
+        canvas.drawRect(0, 0, width, height / 4, mPaint);
 
         mPaint.setColor(Color.CYAN);
-        canvas.drawRect(0, height/4, width, height, mPaint);
+        canvas.drawRect(0, height / 4, width, height/3, mPaint);
 
         mPaint.setColor(Color.DKGRAY);
-        canvas.drawRect(0, height/3, width, height, mPaint);
+        canvas.drawRect(0, height / 3, width, height/2, mPaint);
 
         mPaint.setColor(Color.LTGRAY);
-        canvas.drawRect(0, height/2, width, height, mPaint);
+        canvas.drawRect(0, height / 2, width, height, mPaint);
     }
 }

@@ -14,7 +14,7 @@ import android.view.View;
  */
 public class BusyOnDrawView extends View {
 
-    private Paint mPaint;
+    private Paint mPaint = new Paint();
 
     public BusyOnDrawView(Context context) {
         this(context,null);
@@ -26,13 +26,11 @@ public class BusyOnDrawView extends View {
 
     public BusyOnDrawView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        mPaint = new Paint();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public BusyOnDrawView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        mPaint = new Paint();
     }
 
     @Override
